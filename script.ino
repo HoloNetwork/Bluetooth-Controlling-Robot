@@ -31,7 +31,6 @@ int readPing(){
     delay(250);
     return distance;
 }
-
 void setup() {
     myservo.attach(6);
     pinMode(8,OUTPUT);
@@ -40,7 +39,6 @@ void setup() {
     pinMode(11,OUTPUT);
     Serial.begin(9600);
 }
-
 void loop() {
     readPing();
     for (pos = 45; pos <= 135; pos += 1) {
@@ -55,53 +53,47 @@ void loop() {
         t = Serial.read();
         Serial.println(t);
     }
-if(t == '1'){                  //fwd
-    digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
-    digitalWrite(10, HIGH);
-    digitalWrite(11, LOW);
-}
- 
-else if(t == '2'){            //rev
-    digitalWrite(8, HIGH);
-    digitalWrite(9, LOW);
-    digitalWrite(10, LOW);
-    digitalWrite(11, HIGH);
-}
- 
-else if(t == '3'){            //right
-    digitalWrite(8, LOW);
-    digitalWrite(9, LOW);
-    digitalWrite(10, HIGH);
-    digitalWrite(11, LOW);
-}
- 
-else if(t == '4'){            //left
-    digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
-    digitalWrite(10, LOW);
-    digitalWrite(11, LOW);
-}
-
-else if(t == '5'){            //spin right
-    digitalWrite(8, HIGH);
-    digitalWrite(9, LOW);
-    digitalWrite(10, HIGH);
-    digitalWrite(11, LOW);
-}
-
-else if(t == '6'){            //spin left
-    digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
-    digitalWrite(10, LOW);
-    digitalWrite(11, HIGH);
-}
-
-else if(t == '7'){            //stop
-    digitalWrite(8,LOW);
-    digitalWrite(9,LOW);
-    digitalWrite(10,LOW);
-    digitalWrite(11,LOW);
-}
-delay(100);
+    else if(t == '1'){                  //fwd
+        digitalWrite(8, LOW);
+        digitalWrite(9, HIGH);
+        digitalWrite(10, HIGH);
+        digitalWrite(11, LOW);
+    }
+    else if(t == '2'){            //rev
+        digitalWrite(8, HIGH);
+        digitalWrite(9, LOW);
+        digitalWrite(10, LOW);
+        digitalWrite(11, HIGH);
+    }
+    else if(t == '3'){            //right
+        digitalWrite(8, LOW);
+        digitalWrite(9, LOW);
+        digitalWrite(10, HIGH);
+        digitalWrite(11, LOW);
+    }
+    else if(t == '4'){            //left
+        digitalWrite(8, LOW);
+        digitalWrite(9, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(11, LOW);
+    }
+    else if(t == '5'){            //spin right
+        digitalWrite(8, HIGH);
+        digitalWrite(9, LOW);
+        digitalWrite(10, HIGH);
+        digitalWrite(11, LOW);
+    }
+    else if(t == '6'){            //spin left
+        digitalWrite(8, LOW);
+        digitalWrite(9, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(11, HIGH);
+    }
+    else if(t == '7'){            //stop
+        digitalWrite(8,LOW);
+        digitalWrite(9,LOW);
+        digitalWrite(10,LOW);
+        digitalWrite(11,LOW);
+    }
+    delay(100);
 }
