@@ -1,11 +1,11 @@
 # Bluetooth-Controlling-Robot
 
-A robot that uses the app (Arduino Bluetooth controller) to control a robot with two gear box
+Uses the Arduino Bluetooth controller app, to control the robot.
 
 ## Info:
 
-While connected to the controller it can move; 
+While connected to the app it can move; 
 forward, reverse, right, left, spin right, spin left, stop.
 
-It is also able to return the distance infront of the robot,
-via the sonar sensors.
+Additionally, it can provide information about the distance 
+of objects ahead of the robot.
